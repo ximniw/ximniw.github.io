@@ -96,14 +96,18 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>论文研读1-Integrating Multi-Label Contrastive Learning with Dual Adversarial Graph Neural Networks for Cross-Modal Retrieval
+    <h2>论文研读-Integrating Multi-Label Contrastive Learning with Dual Adversarial Graph Neural Networks for Cross-Modal Retrieval
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p>keywords P-GNN-CON, I-GNN-CON(提出的模型) Cross-Modal Retrieval(跨模态检索) Multi-Label Contrastive Learning(多标签对比学习) Dual Adversarial Graph Neural Networks(Dual GAN) GAN(生成对抗网络) Generative Adversarial Networks multi-hop Gragh Neural Networks GNN(图神经网络)Graph Neural Networks Background 传统完成跨模态检索任务，通常需要将不同模态的数据映射到同一表征空间，以解决不同模态数据间的差异
+现有方法的缺陷：1）引入损失可能无法消除模态间的差异； 2）实际应用中的数据大多来自单一模态，完整模态数据很稀少，而现有方法大多假定样本的所有模态数据是完整的； 3）忽视了多模态数据的标签间的相关性，不利于建立多模态数据间的语义联系 4）样本被简单分类为0，1，但实际上样本标签的相似度很难完全相同或不同，不适应多标签情况
+要解决的问题：1）消除模态间的差异，从而去除特定模态的信息，完全保留语义信息 2）捕捉了标签的相关性，驱动模型学习判别特征 3） 在标签相似度0和1之间建立离散的模型
+solution 对于问题1：设计了Dual GAN，生成共同表征同时重构一些原始表征，其中生成模型学习多模态联合数据的分布并生成一些伪表征，判别模型学习判断原始表征和伪表征。通过优化对抗损失以去除特定模态特征并保留语义信息； 对于问题2：提出multi-hop Gragh Neural Networks(P-GNN,I-GNN)来生成inter-dependent的标签分类器,用学习到的分类器对Dual GAN生成的共同表征进行分类，来完成端到端训练并利用分类损失帮助模型学习underlying semantic structure 对于问题3：为Multi-label Cross-modal Contrastive Learning提出了新的soft multi-label contrastive loss和soft positive sampling 实现非二元的标签相似度 related work 跨模态检索 学习共同表征的两种方式：
+传统多模态表征学习(Canonical Correlation Analysis (CCA),Joint Representation Learning (JRL)) 深度多模态表征学习(Deep Canonical Correlation Analysis (DCCA),Probabilistic Cross-Modal Embedding (PCME),Multi-modal Robust Learning (MRL)，T2VLAD(完成文本视频检索任务)，Adversarial Cross-Modal Retrieval model (ACMR)，Deep Supervised Cross-modal Retrieval (DSCMR)…) GNN Graph Laplacian:多应用于GNN中 GCN，AGCN，GaAN (图学习)...</p>
   </div>
   <footer class="entry-footer"><span title='2023-09-21 16:24:43 +0800 CST'>September 21, 2023</span>&nbsp;·&nbsp;winmix</footer>
-  <a class="entry-link" aria-label="post link to 论文研读1-Integrating Multi-Label Contrastive Learning with Dual Adversarial Graph Neural Networks for Cross-Modal Retrieval" href="/posts/%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB1/"></a>
+  <a class="entry-link" aria-label="post link to 论文研读-Integrating Multi-Label Contrastive Learning with Dual Adversarial Graph Neural Networks for Cross-Modal Retrieval" href="/posts/%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB1/"></a>
 </article>
     </main>
     
